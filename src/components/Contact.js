@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 
-function Contact() {
+function Contact()    {
 
 }
 
