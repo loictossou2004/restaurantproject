@@ -1,6 +1,6 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Demande de fonctionnalité
+about: Suggérer une fonctionnalité
 title: ''
 labels: ''
 assignees: ''
