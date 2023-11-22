@@ -11,7 +11,6 @@ assignees: ''
 
 ## Décris la fonctionnalité
 
-## eText
 
 ## Cette fonctionnalité est en rapport avec quelle partie ?
 - [ ] Frontend
