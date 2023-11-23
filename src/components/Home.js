@@ -196,21 +196,23 @@ function Home() {
             </div> */}
 
 
-            {/* <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
+
+            {/* Social Network for restaurant */}
+            <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <div className='max-w-[90%]  w-full mx-auto mb-4 p-8 rounded-3xl space-y-10'>
                     <div className='flex justify-center items-center space-x-2'>
-                        <img src={RESTO} alt="Logo" className="h-14 w-auto" />
+                        {/* <img src={RESTO} alt="Logo" className="h-14 w-auto" /> */}
                         <p className='font-bold'>Chez <span className='text-[#dfd10c] text-[3.2rem]'>RICO</span></p>
                     </div>
                     <div className='flex justify-center'>
                         <div className='flex sm:justify-between justify-center items-center space-x-8 sm:space-x-2 w-1/2 '>
-                            <img src={INSTA} alt="Logo" className="h-10 w-auto" />
+                            {/* <img src={INSTA} alt="Logo" className="h-10 w-auto" />
                             <img src={WHATSAPP} alt="Logo" className="h-10 w-auto" />
-                            <img src={TWITTER} alt="Logo" className="h-10 w-auto" />
+                            <img src={TWITTER} alt="Logo" className="h-10 w-auto" /> */}
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             {/* <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <div className='max-w-[95%] md:max-w-[70%]  w-full mx-auto mb-4  rounded-3xl space-y-10'>
