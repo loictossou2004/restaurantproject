@@ -7,6 +7,8 @@ function Contact() {
     return (
         <div className='overflow-hidden w-full font-Poppins text-center'>
             {/* <NavbarComponent/> */}
+            
+            {/* Formulaire de contact */}
             <div className='w-full h-full space-y-11 py-12 animate-fadeIn mb-20'>
                 <p className='text-3xl'>Contactez nous !!!</p>
                 <div className='max-w-[90%] sm:max-w-[700px] w-full mx-auto mb-4 bg-white p-8 rounded-3xl shadow-lm space-y-3'>
@@ -33,6 +35,9 @@ function Contact() {
                     </form>
                 </div>
             </div>
+            
+            
+            {/* FOOTER */}
             <footer className='w-full h-auto flex justify-center items-center bg-[#dfd10c] animate-fadeIn sm:fixed sm:bottom-0'>
                 <div className='md:max-w-[80%] max-w-[90%] h-auto w-full mx-auto my-4 overflow-hidden  object-contain space-y-4' >                        
                     <div className='flex flex-col justify-center space-y-2  items-center'>
