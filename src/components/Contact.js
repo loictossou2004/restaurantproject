@@ -33,15 +33,14 @@ function Contact() {
                     </form>
                 </div>
             </div>
-            {/* FOOTER */}
-            {/* <footer className='w-full h-auto flex justify-center items-center bg-[#dfd10c] animate-fadeIn sm:fixed sm:bottom-0'>
+            <footer className='w-full h-auto flex justify-center items-center bg-[#dfd10c] animate-fadeIn sm:fixed sm:bottom-0'>
                 <div className='md:max-w-[80%] max-w-[90%] h-auto w-full mx-auto my-4 overflow-hidden  object-contain space-y-4' >                        
                     <div className='flex flex-col justify-center space-y-2  items-center'>
                         <p className='p-2 bg-white rounded-md text-[10px] font-bold'>Chez Rico 2023. Restaurant Chez Rico, Carrefour Saint Michel</p>
                         <p className='p-2 bg-white rounded-md text-[10px] font-bold'>Tel: +229 00 00 00 00 00</p>
                     </div>
                 </div>
-            </footer> */}
+            </footer>
         </div>        
     )
 }
