@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../App.css'
 // import NavbarComponent from './Navbar'
 
@@ -14,7 +14,7 @@ import SAUCE_2 from '../assets/andalouse.jpg'
 import FRITE from '../assets/frites.jpg'
 import NUGGETS from '../assets/Nuggets.jpg'
 import RICE from '../assets/riz.jpg'
-// import { ClipLoader } from 'react-spinners'
+import { ClipLoader } from 'react-spinners'
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai'
 
@@ -25,17 +25,17 @@ function Order() {
 
     // const navigate = useNavigate()
 
-    // const [CheckOrder, setCheckOrder] = useState(false);
+    const [CheckOrder, setCheckOrder] = useState(false);
 
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
-    // const updateLoading = () => {
-    //     if (CheckOrder)
-    //         setLoading(true)
-    //     setTimeout(() => {
-    //         setLoading(false)
-    //     }, 2000)
-    // }
+    const updateLoading = () => {
+        if (CheckOrder)
+            setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }
 
     
     const [Chawarma, setChawarma] = useState([
@@ -124,14 +124,14 @@ function Order() {
             });
     };
 
-    // const ChangeCheckOrder = () => {
-    //     const isOrderChecked = [...Chawarma, ...Drink, ...Sauce, ...Frite].some((item) => item.number > 0);
-    //     setCheckOrder(isOrderChecked);
-    // };
+    const ChangeCheckOrder = () => {
+        const isOrderChecked = [...Chawarma, ...Drink, ...Sauce, ...Frite].some((item) => item.number > 0);
+        setCheckOrder(isOrderChecked);
+    };
 
-    // useEffect(() => {
-    //     ChangeCheckOrder();
-    //   }, [Chawarma, Drink, Sauce, Frite]);
+    useEffect(() => {
+        ChangeCheckOrder();
+      }, [Chawarma, Drink, Sauce, Frite]);
 
     return (
         <div className='overflow-hidden w-full font-Poppins text-center'>
@@ -262,12 +262,12 @@ function Order() {
             </div>
 
             {/* Validation de la commande */}
-            {/* <div className='w-full h-full py-7 flex justify-center'>
+            <div className='w-full h-full py-7 flex justify-center'>
                 <button onClick={() => updateLoading()} className={CheckOrder ? 'text-white bg-[#dfd10c] p-5 rounded-md font-bold hover:scale-110 duration-200 flex justify-center items-center space-x-5' : 'text-white bg-[#DCD573] p-5 rounded-md font-bold flex'}>
                     <ClipLoader color="#FFFF" loading={loading} size={20} aria-label="Loading Spinner" data-testid="loader"/>
                     <p>Validez la commande</p>
                 </button>
-            </div> */}
+            </div>
 
             {/* Footer */}
             <footer className='w-full h-auto flex justify-center items-center bg-[#dfd10c] animate-fadeIn'>
