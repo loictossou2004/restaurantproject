@@ -27,9 +27,9 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import {useNavigate} from 'react-router-dom'
-// import { useState } from 'react'
+import { useState } from 'react'
 // import axios from 'axios'
-// import { ClipLoader } from 'react-spinners'
+import { ClipLoader } from 'react-spinners'
 
 
 function Home() {
@@ -42,29 +42,29 @@ function Home() {
     // const [showSubmit, setShowSubmit] = useState(false)
     // const [showMessage, setShowMessage] = useState('')
 
-    // const options = [
-    //     {name: "1 personne", value: 1},
-    //     {name: "2 personnes", value: 2},
-    //     {name: "3 personnes", value: 3},
-    //     {name: "4 personnes", value: 4},
-    //     {name: "5 personnes", value: 5},
-    //     {name: "6 personnes", value: 6},
-    // ]
+    const options = [
+        {name: "1 personne", value: 1},
+        {name: "2 personnes", value: 2},
+        {name: "3 personnes", value: 3},
+        {name: "4 personnes", value: 4},
+        {name: "5 personnes", value: 5},
+        {name: "6 personnes", value: 6},
+    ]
 
-    // const [dataReservation, setDataReservation] = useState({
-    //     name : "",
-    //     email: "",
-    //     date: "",
-    //     time: "",
-    //     numbers_person: 1
-    //   })
+    const [dataReservation, setDataReservation] = useState({
+        name : "",
+        email: "",
+        date: "",
+        time: "",
+        numbers_person: 1
+      })
     
-    // const [dataContactUs, setDataContactUs] = useState({
-    //     name : "",
-    //     email: "",
-    //     phoneNumber: "",
-    //     message: ""
-    // })
+    const [dataContactUs, setDataContactUs] = useState({
+        name : "",
+        email: "",
+        phoneNumber: "",
+        message: ""
+    })
 
 
 
@@ -162,7 +162,7 @@ function Home() {
             <div className='max-w-[90%] sm:max-w-[700px] w-full mx-auto mb-4 bg-white p-8 rounded-3xl shadow-lm space-y-3 animate-fadeIn'>
                 <p className='text-xl'>Les réservations sont ouvertes !!!</p>
                 <p className='text-xl'> <span className=' font-bold'>ATTENTION</span> : Saisissez votre numero de télephone dans le formulaire sous le format +229...</p>
-                {/* <form onSubmit={Booked} className='space-y-6'>
+                <form /*onSubmit={Booked}*/ className='space-y-6'>
                     <div>
                         <input value={dataReservation.name} onChange={(e) => setDataReservation((data) => ({...data, name: e.target.value}) )} type='text' placeholder='Saisissez votre nom et prénom' className='w-full p-2 py-sm-3 rounded-md mt-1 outline-none border placeholder:font-extrabold' required/>
                     </div>
@@ -181,13 +181,13 @@ function Home() {
                         ))}
                     </select>
                     <div type='submit' className='flex py-1 justify-center items-center font-bold bg-[#dfd10c] hover:scale-105 transition duration-500 hover:duration-500 cursor-pointer'>
-                        {loading ?
-                            <ClipLoader color="#FFFF" loading={true} size={30} aria-label="Loading Spinner" data-testid="loader" className=''/>
-                            :
+                        {/* {loading ? */}
+                            <ClipLoader color="#FFF" loading={true} size={130} aria-label="Loading Spinner" data-testid="loader" className=''/>
+                            {/* :
                             <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Réserver</button>
-                        }                            
+                        }                             */}
                     </div>
-                </form> */}
+                </form>
             </div>
             {/* <div className={showSubmit ? 'w-full h-full  fixed top-0 animate-fadeIn' : 'hidden'}>
                 <div className='flex justify-center items-center'>
@@ -289,7 +289,7 @@ function Home() {
                     </div>
                     <div className='md:w-1/2 w-full h-full flex flex-col justify-center items-center space-y-3'>
                         <img src={MEAT} className='h-10 w-10 object-cover'  alt=''></img>
-                        {/* <h1 className='font-bold text-[#dfd10c] text-2xl'>De la viande d'exception</h1> */}
+                        <h1 className='font-bold text-[#dfd10c] text-2xl'>De la viande d exception</h1>
                         <p className='px-0 md:px-16 text-left'>
                             Sit pariatur occaecat voluptate non est nisi officia est est id consectetur aliquip aliqua est.
                             Occaecat tempor irure quis enim magna. In officia id do dolore.
@@ -317,14 +317,14 @@ function Home() {
                         </div>
                         <p className='py-8 text-xl font-bold'>Tel : +229 00 00 00 00 00</p>
                     </div>
-                    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.0726217268457!2d2.4279929479018305!3d6.365147023912638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10235594bf28d051%3A0x6fb8aeff9e296a51!2sEpitech%20Benin!5e0!3m2!1sfr!2sbj!4v1685617897253!5m2!1sfr!2sbj"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.0726217268457!2d2.4279929479018305!3d6.365147023912638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10235594bf28d051%3A0x6fb8aeff9e296a51!2sEpitech%20Benin!5e0!3m2!1sfr!2sbj!4v1685617897253!5m2!1sfr!2sbj"
                         width="600" 
                         height="450"
                         style={{ border: "0", width: "100%" }}
                         allowfullscreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade" title='location'>
-                    </iframe> */}
+                         title='location'>
+                    </iframe>
 
                 </div>
             </div>
@@ -337,7 +337,7 @@ function Home() {
             <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <p className='text-3xl'>Nous contacter</p>
                 <div className='max-w-[90%] sm:max-w-[700px] w-full mx-auto mb-4 bg-white p-8 rounded-3xl shadow-lm space-y-3'>
-                    {/* <form onSubmit={ContactUs} className='space-y-6'>
+                    <form /*onSubmit={ContactUs}*/ className='space-y-6'>
                         <div className='flex flex-col items-start'>
                             <label className='text-sm font-extrabold'>Nom</label>
                             <input value={dataContactUs.name} onChange={(e) => setDataContactUs((data) => ({...data, name: e.target.value}) )} type='text' placeholder='Saisissez votre identifiant' className='w-full p-2 py-sm-3 rounded-md mt-1 outline-none border placeholder:font-extrabold' required/>
@@ -355,14 +355,14 @@ function Home() {
                             <textarea value={dataContactUs.message} onChange={(e) => setDataContactUs((data) => ({...data, message: e.target.value}) )} placeholder='Ecrivez ici' className='w-full p-2 py-sm-3 rounded-md mt-1 outline-none border placeholder:font-extrabold'></textarea>
                         </div>
                         <div type="submit" className='flex py-1 justify-center font-bold bg-[#dfd10c] hover:scale-105 transition duration-500 hover:duration-500 cursor-pointer'>
-                            {loading ?
+                            {/* {loading ? */}
                                 <ClipLoader color="#FFFF" loading={true} size={30} aria-label="Loading Spinner" data-testid="loader" className=''/>
-                                :
+                                {/* :
                                 <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Envoyer</button>
-                            }
+                            } */}
                             <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Réserver</button>
                         </div>
-                    </form> */}
+                    </form>
                 </div>
             </div>
 
