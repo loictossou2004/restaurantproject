@@ -23,8 +23,8 @@ import WALL_12 from '../assets/wall_12.jpeg'
 import WALL_13 from '../assets/wall_13.jpg'
 import STAR from '../assets/star.png'
 import MEAT from '../assets/meat.png'
-// import useEmblaCarousel from 'embla-carousel-react'
-// import Autoplay from 'embla-carousel-autoplay'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 // import { AiOutlineArrowDown } from 'react-icons/ai'
 // import {useNavigate} from 'react-router-dom'
 // import { useState } from 'react'
@@ -34,7 +34,7 @@ import MEAT from '../assets/meat.png'
 
 function Home() {
 
-    // const [emblaRef]  = useEmblaCarousel({loop: false}, [Autoplay()])
+    const [emblaRef]  = useEmblaCarousel({loop: false}, [Autoplay()])
 
     // const navigate = useNavigate()
 
@@ -127,7 +127,7 @@ function Home() {
             {/* Carousel */}
             <div className='w-full h-auto flex justify-center items-center animate-fadeIn'>
                 <div className='w-full h-auto'>
-                    <div className='md:max-w-[80%] max-w-[90%] md:h-[35rem] h-[25rem] w-full mx-auto my-4 bg-white overflow-hidden rounded-3xl object-contain space-y-8 shadow-xl' /*ref={emblaRef}*/>
+                    <div className='md:max-w-[80%] max-w-[90%] md:h-[35rem] h-[25rem] w-full mx-auto my-4 bg-white overflow-hidden rounded-3xl object-contain space-y-8 shadow-xl' ref={emblaRef}>
                         <div className='flex space-x-14 w-full h-full object-none'>
                             <img src={NEVER} className='h-full w-full object-cover rounded-md' style={{flex: "0 0 100%"}} alt=''></img>
                             <img src={CHICKEN} className='h-full w-full object-cover rounded-md' style={{flex: "0 0 100%"}} alt=''></img>
