@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import '../App.css'
-// import NavbarComponent from './Navbar'
+import NavbarComponent from './Navbar'
 
 import WALL_1 from '../assets/wall_1.jpg'
 import WALL_2 from '../assets/wall_5.jpg'
@@ -135,7 +135,7 @@ function Order() {
 
     return (
         <div className='overflow-hidden w-full font-Poppins text-center'>
-            {/* <NavbarComponent/> */}
+            <NavbarComponent/>
 
             {/* Choix du chawarma */}
             <div className='w-full h-auto animate-fadeIn mt-6'>
