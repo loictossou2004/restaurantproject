@@ -25,7 +25,7 @@ import STAR from '../assets/star.png'
 import MEAT from '../assets/meat.png'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-// import { AiOutlineArrowDown } from 'react-icons/ai'
+import { AiOutlineArrowDown } from 'react-icons/ai'
 // import {useNavigate} from 'react-router-dom'
 // import { useState } from 'react'
 // import axios from 'axios'
@@ -152,7 +152,7 @@ function Home() {
                     <div className='flex justify-center items-center space-x-6 py-5'>
                         <p className=' font-bold text-xl'>Fais ta <span className='text-[#dfd10c]'>Réservation</span> ici</p>
                         <div className='flex justify-center items-center bg-white w-8 h-8 rounded-full shadow-lm animate-bounce'>
-                            {/* <AiOutlineArrowDown size={20} color='#dfd10c' /> */}
+                            <AiOutlineArrowDown size={20} color='#dfd10c' />
                         </div>
                     </div>
                 </div>
