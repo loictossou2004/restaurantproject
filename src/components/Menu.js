@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-// import NavbarComponent from './Navbar'
+import NavbarComponent from './Navbar'
 import DRINK_MENU from '../assets/Drink-menu.jpg'
 
 function Menu() {
@@ -8,7 +8,7 @@ function Menu() {
 
     return (
         <div className='overflow-hidden w-full font-Poppins text-center'>
-            {/* <NavbarComponent/> */}
+            <NavbarComponent/>
      
 
 
