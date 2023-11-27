@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-// import NavbarComponent from './Navbar'
+import NavbarComponent from './Navbar'
 import CHICKEN from '../assets/kitchen.jpeg'
 import NEVER from '../assets/Recettes.jpg'
 import AFRICAN from '../assets/Tradi.jpeg'
@@ -123,7 +123,7 @@ function Home() {
 
     return (
         <div className='overflow-hidden w-full font-Poppins text-center'>
-            {/* <NavbarComponent/> */}
+            <NavbarComponent/>
             {/* Carousel */}
             <div className='w-full h-auto flex justify-center items-center animate-fadeIn'>
                 <div className='w-full h-auto'>
