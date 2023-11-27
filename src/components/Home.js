@@ -26,7 +26,7 @@ import MEAT from '../assets/meat.png'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { AiOutlineArrowDown } from 'react-icons/ai'
-// import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 // import { useState } from 'react'
 // import axios from 'axios'
 // import { ClipLoader } from 'react-spinners'
@@ -36,7 +36,7 @@ function Home() {
 
     const [emblaRef]  = useEmblaCarousel({loop: false}, [Autoplay()])
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     // const [loading, setLoading] = useState(false)
     // const [showSubmit, setShowSubmit] = useState(false)
@@ -141,8 +141,8 @@ function Home() {
                 <div className='md:max-w-[80%] max-w-[90%] h-auto w-full mx-auto my-4 overflow-hidden  object-contain space-y-4' >
                     <p className='text-xl'>Nous sommes ouverts du <span className='font-bold text-[#dfd10c]'>LUNDI au LUNDI</span></p>
                     <div className='flex justify-center space-x-12'>
-                        {/* <p className='p-4 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate('/#last-section')}>Carte du restaurant </p>
-                        <p className='p-4 px-10 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate("../Order")}>Order here</p> */}
+                        <p className='p-4 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate('../Menu')}>Carte du restaurant </p>
+                        <p className='p-4 px-10 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate("../Order")}>Order here</p>
                     </div>
                 </div>
             </div>
