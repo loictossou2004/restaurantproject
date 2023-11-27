@@ -1,12 +1,13 @@
 import React from 'react'
 import '../App.css'
+import NavbarComponent from './Navbar'
 
 function Contact() {
 
 
     return (
         <div className='overflow-hidden w-full font-Poppins text-center'>
-            {/* <NavbarComponent/> */}
+            <NavbarComponent/>
             
             {/* Formulaire de contact */}
             <div className='w-full h-full space-y-11 py-12 animate-fadeIn mb-20'>
