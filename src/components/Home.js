@@ -1,32 +1,32 @@
 import React from 'react'
 import '../App.css'
 // import NavbarComponent from './Navbar'
-// import CHICKEN from '../assets/kitchen.jpeg'
-// import NEVER from '../assets/Recettes.jpg'
-// import AFRICAN from '../assets/Tradi.jpeg'
-// import RESTO from '../assets/restaurant.png'
-// import INSTA from '../assets/instagram.png'
-// import TWITTER from '../assets/twitter.png'
-// import WHATSAPP from '../assets/whatsapp.png'
-// import WALL_1 from '../assets/wall_1.jpg'
-// import WALL_2 from '../assets/wall_2.jpeg'
-// import WALL_3 from '../assets/wall_3.jpeg'
-// import WALL_4 from '../assets/wall_4.jpg'
-// import WALL_5 from '../assets/wall_5.jpg'
-// import WALL_6 from '../assets/wall_6.jpeg'
-// import WALL_7 from '../assets/wall_7.jpeg'
-// import WALL_8 from '../assets/wall_8.jpg'
-// import WALL_9 from '../assets/wall_9.jpeg'
-// import WALL_10 from '../assets/wall_10.jpeg'
-// import WALL_11 from '../assets/wall_11.jpg'
-// import WALL_12 from '../assets/wall_12.jpeg'
-// import WALL_13 from '../assets/wall_13.jpg'
-// import STAR from '../assets/star.png'
-// import MEAT from '../assets/meat.png'
-// import useEmblaCarousel from 'embla-carousel-react'
-// import Autoplay from 'embla-carousel-autoplay'
-// import { AiOutlineArrowDown } from 'react-icons/ai'
-// import {useNavigate} from 'react-router-dom'
+import CHICKEN from '../assets/kitchen.jpeg'
+import NEVER from '../assets/Recettes.jpg'
+import AFRICAN from '../assets/Tradi.jpeg'
+import RESTO from '../assets/restaurant.png'
+import INSTA from '../assets/instagram.png'
+import TWITTER from '../assets/twitter.png'
+import WHATSAPP from '../assets/whatsapp.png'
+import WALL_1 from '../assets/wall_1.jpg'
+import WALL_2 from '../assets/wall_2.jpeg'
+import WALL_3 from '../assets/wall_3.jpeg'
+import WALL_4 from '../assets/wall_4.jpg'
+import WALL_5 from '../assets/wall_5.jpg'
+import WALL_6 from '../assets/wall_6.jpeg'
+import WALL_7 from '../assets/wall_7.jpeg'
+import WALL_8 from '../assets/wall_8.jpg'
+import WALL_9 from '../assets/wall_9.jpeg'
+import WALL_10 from '../assets/wall_10.jpeg'
+import WALL_11 from '../assets/wall_11.jpg'
+import WALL_12 from '../assets/wall_12.jpeg'
+import WALL_13 from '../assets/wall_13.jpg'
+import STAR from '../assets/star.png'
+import MEAT from '../assets/meat.png'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+import { AiOutlineArrowDown } from 'react-icons/ai'
+import {useNavigate} from 'react-router-dom'
 // import { useState } from 'react'
 // import axios from 'axios'
 // import { ClipLoader } from 'react-spinners'
@@ -34,9 +34,9 @@ import '../App.css'
 
 function Home() {
 
-    // const [emblaRef]  = useEmblaCarousel({loop: false}, [Autoplay()])
+    const [emblaRef]  = useEmblaCarousel({loop: false}, [Autoplay()])
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     // const [loading, setLoading] = useState(false)
     // const [showSubmit, setShowSubmit] = useState(false)
@@ -125,7 +125,7 @@ function Home() {
         <div className='overflow-hidden w-full font-Poppins text-center'>
             {/* <NavbarComponent/> */}
             {/* Carousel */}
-            {/* <div className='w-full h-auto flex justify-center items-center animate-fadeIn'>
+            <div className='w-full h-auto flex justify-center items-center animate-fadeIn'>
                 <div className='w-full h-auto'>
                     <div className='md:max-w-[80%] max-w-[90%] md:h-[35rem] h-[25rem] w-full mx-auto my-4 bg-white overflow-hidden rounded-3xl object-contain space-y-8 shadow-xl' ref={emblaRef}>
                         <div className='flex space-x-14 w-full h-full object-none'>
@@ -135,14 +135,14 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             <div className='w-full h-auto flex justify-center items-center animate-fadeIn'>
                 <div className='md:max-w-[80%] max-w-[90%] h-auto w-full mx-auto my-4 overflow-hidden  object-contain space-y-4' >
                     <p className='text-xl'>Nous sommes ouverts du <span className='font-bold text-[#dfd10c]'>LUNDI au LUNDI</span></p>
                     <div className='flex justify-center space-x-12'>
-                        {/* <p className='p-4 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate('/#last-section')}>Carte du restaurant </p>
-                        <p className='p-4 px-10 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate("../Order")}>Order here</p> */}
+                        <p className='p-4 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate('../Menu')}>Carte du restaurant </p>
+                        <p className='p-4 px-10 font-bold border-b border-white bg-[#dfd10c] text-white rounded-md hover:scale-110 duration-200 cursor-pointer' onClick={() => navigate("../Order")}>Order here</p>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@ function Home() {
                     <div className='flex justify-center items-center space-x-6 py-5'>
                         <p className=' font-bold text-xl'>Fais ta <span className='text-[#dfd10c]'>Réservation</span> ici</p>
                         <div className='flex justify-center items-center bg-white w-8 h-8 rounded-full shadow-lm animate-bounce'>
-                            {/* <AiOutlineArrowDown size={20} color='#dfd10c' /> */}
+                            <AiOutlineArrowDown size={20} color='#dfd10c' />
                         </div>
                     </div>
                 </div>
@@ -201,20 +201,20 @@ function Home() {
             <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <div className='max-w-[90%]  w-full mx-auto mb-4 p-8 rounded-3xl space-y-10'>
                     <div className='flex justify-center items-center space-x-2'>
-                        {/* <img src={RESTO} alt="Logo" className="h-14 w-auto" /> */}
+                        <img src={RESTO} alt="Logo" className="h-14 w-auto" />
                         <p className='font-bold'>Chez <span className='text-[#dfd10c] text-[3.2rem]'>RICO</span></p>
                     </div>
                     <div className='flex justify-center'>
                         <div className='flex sm:justify-between justify-center items-center space-x-8 sm:space-x-2 w-1/2 '>
-                            {/* <img src={INSTA} alt="Logo" className="h-10 w-auto" />
+                            <img src={INSTA} alt="Logo" className="h-10 w-auto" />
                             <img src={WHATSAPP} alt="Logo" className="h-10 w-auto" />
-                            <img src={TWITTER} alt="Logo" className="h-10 w-auto" /> */}
+                            <img src={TWITTER} alt="Logo" className="h-10 w-auto" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
+            <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <div className='max-w-[95%] md:max-w-[70%]  w-full mx-auto mb-4  rounded-3xl space-y-10'>
                     <div className='flex flex-wrap'>
                         <div className='w-[50%] md:w-[25%] h-40'>
@@ -267,13 +267,13 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <p className='text-3xl'>Nos engagements</p>
                 <div className='max-w-[90%] md:max-w-[80%] w-full mx-auto mb-4 bg-white  rounded-3xl space-y-20 md:space-y-0 flex flex-col md:flex-row items-center '>
                     <div className='md:w-1/2 w-full h-full flex flex-col justify-center items-center space-y-3'>
-                        {/* <img src={STAR} className='h-10 w-10 object-cover'  alt=''></img> */}
+                        <img src={STAR} className='h-10 w-10 object-cover'  alt=''></img>
                         <h1 className='font-bold text-[#dfd10c] text-2xl'>Des aliments de qualités</h1>
                         <p className='px-0 md:px-16 text-left'>
                             Sit pariatur occaecat voluptate non est nisi officia est est id consectetur aliquip aliqua est.
@@ -288,7 +288,7 @@ function Home() {
                         </p>
                     </div>
                     <div className='md:w-1/2 w-full h-full flex flex-col justify-center items-center space-y-3'>
-                        {/* <img src={MEAT} className='h-10 w-10 object-cover'  alt=''></img> */}
+                        <img src={MEAT} className='h-10 w-10 object-cover'  alt=''></img>
                         {/* <h1 className='font-bold text-[#dfd10c] text-2xl'>De la viande d'exception</h1> */}
                         <p className='px-0 md:px-16 text-left'>
                             Sit pariatur occaecat voluptate non est nisi officia est est id consectetur aliquip aliqua est.
