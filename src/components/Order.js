@@ -11,9 +11,9 @@ import WALL_3 from '../assets/wall_4.jpg'
 // import SAUCE from '../assets/Mediterranean.png'
 // import SAUCE_1 from '../assets/algerienne.jpg'
 // import SAUCE_2 from '../assets/andalouse.jpg'
-// import FRITE from '../assets/frites.jpg'
-// import NUGGETS from '../assets/Nuggets.jpg'
-// import RICE from '../assets/riz.jpg'
+import FRITE from '../assets/frites.jpg'
+import NUGGETS from '../assets/Nuggets.jpg'
+import RICE from '../assets/riz.jpg'
 // import { ClipLoader } from 'react-spinners'
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai'
@@ -56,11 +56,11 @@ function Order() {
     //     {id: 3, number: 0, price: 300, image: SAUCE_2, name: "Sauce andalouse", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."}
     // ])
 
-    // const [Frite, setFrite] = useState([
-    //     {id: 1, number: 0, price: 1000, image: FRITE, name: "Frite", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
-    //     {id: 2, number: 0, price: 1000, image: NUGGETS, name: "Nuggets", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
-    //     {id: 3, number: 0, price: 1000, image: RICE, name: "Frite", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."}
-    // ])
+    const [Frite, setFrite] = useState([
+        {id: 1, number: 0, price: 1000, image: FRITE, name: "Frite", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
+        {id: 2, number: 0, price: 1000, image: NUGGETS, name: "Nuggets", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
+        {id: 3, number: 0, price: 1000, image: RICE, name: "Frite", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."}
+    ])
 
     const updateScoreByIndexShawarma = (index ) => {
         setChawarma(prevChawarma => {
@@ -83,13 +83,13 @@ function Order() {
     //       return updatedList;
     //     });
     // };
-    // const updateScoreByIndexFrite = (index ) => {
-    //     setFrite(prevChawarma => {
-    //       const updatedList = [...prevChawarma];
-    //       updatedList[index] = {...updatedList[index], number: updatedList[index].number + 1};
-    //       return updatedList;
-    //     });
-    // };
+    const updateScoreByIndexFrite = (index ) => {
+        setFrite(prevChawarma => {
+          const updatedList = [...prevChawarma];
+          updatedList[index] = {...updatedList[index], number: updatedList[index].number + 1};
+          return updatedList;
+        });
+    };
 
     const DecreaseScoreByIndexShawarma = (index ) => {
         if (Chawarma[index].number !== 0)
@@ -115,14 +115,14 @@ function Order() {
     //         return updatedList;
     //         });
     // };
-    // const DecreaseScoreByIndexFrite = (index ) => {
-    //     if (Frite[index].number !== 0)
-    //         setFrite(prevChawarma => {
-    //         const updatedList = [...prevChawarma];
-    //         updatedList[index] = {...updatedList[index], number: updatedList[index].number - 1};
-    //         return updatedList;
-    //         });
-    // };
+    const DecreaseScoreByIndexFrite = (index ) => {
+        if (Frite[index].number !== 0)
+            setFrite(prevChawarma => {
+            const updatedList = [...prevChawarma];
+            updatedList[index] = {...updatedList[index], number: updatedList[index].number - 1};
+            return updatedList;
+            });
+    };
 
     // const ChangeCheckOrder = () => {
     //     const isOrderChecked = [...Chawarma, ...Drink, ...Sauce, ...Frite].some((item) => item.number > 0);
@@ -169,7 +169,7 @@ function Order() {
             </div>
 
             {/* Choix des extras */}
-            {/* <div className='w-full h-auto animate-fadeIn mt-6'>
+            <div className='w-full h-auto animate-fadeIn mt-6'>
                 <p className='text-2xl'>Choisissez vos <span className='text-[#dfd10c] font-bold'>Extras</span></p>
                 <div className='w-full h-auto'>
                     <div className='md:max-w-[90%] max-w-[90%] h-full w-full flex md:flex-row flex-col mx-auto py-4 overflow-hidden rounded-3xl object-contain md:space-x-10 md:space-y-0 space-y-10'>
@@ -197,7 +197,7 @@ function Order() {
                         ))}
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             {/* Choix de la sauce */}
             {/* <div className='w-full h-auto animate-fadeIn mt-6'>
