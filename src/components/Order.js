@@ -5,9 +5,9 @@ import '../App.css'
 import WALL_1 from '../assets/wall_1.jpg'
 import WALL_2 from '../assets/wall_5.jpg'
 import WALL_3 from '../assets/wall_4.jpg'
-// import SPRITE from '../assets/sprite.png'
-// import COCA from '../assets/Coca.jpg'
-// import MONSTER from '../assets/Monster.png'
+import SPRITE from '../assets/sprite.png'
+import COCA from '../assets/Coca.jpg'
+import MONSTER from '../assets/Monster.png'
 import SAUCE from '../assets/Mediterranean.png'
 import SAUCE_1 from '../assets/algerienne.jpg'
 import SAUCE_2 from '../assets/andalouse.jpg'
@@ -44,11 +44,11 @@ function Order() {
         {id: 3, number: 0, price: 2000, image: WALL_3, name: "Chawarma au boeuf", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."}
     ])
     
-    // const [Drink, setDrink] = useState([
-    //     {id: 1, number: 0, price: 500, image: SPRITE, name: "Sprite", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
-    //     {id: 2, number: 0, price: 500, image: COCA, name: "Coca", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
-    //     {id: 3, number: 0, price: 500, image: MONSTER, name: "Monster", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."}
-    // ])
+    const [Drink, setDrink] = useState([
+        {id: 1, number: 0, price: 500, image: SPRITE, name: "Sprite", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
+        {id: 2, number: 0, price: 500, image: COCA, name: "Coca", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
+        {id: 3, number: 0, price: 500, image: MONSTER, name: "Monster", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."}
+    ])
 
     const [Sauce, setSauce] = useState([
         {id: 1, number: 0, price: 300, image: SAUCE, name: "Sauce à l'ail", describe: "Aliqua reprehenderit excepteur aute adipisicing labore aute tempor officia sint id minim aliquip. Est officia irure sint id. Eu quis consequat ullamco occaecat minim est laboris. Incididunt esse in Lorem dolore amet cillum tempor magna."},
@@ -69,13 +69,13 @@ function Order() {
           return updatedList;
         });
     };
-    // const updateScoreByIndexDrink = (index ) => {
-    //     setDrink(prevChawarma => {
-    //       const updatedList = [...prevChawarma];
-    //       updatedList[index] = {...updatedList[index], number: updatedList[index].number + 1};
-    //       return updatedList;
-    //     });
-    // };
+    const updateScoreByIndexDrink = (index ) => {
+        setDrink(prevChawarma => {
+          const updatedList = [...prevChawarma];
+          updatedList[index] = {...updatedList[index], number: updatedList[index].number + 1};
+          return updatedList;
+        });
+    };
     const updateScoreByIndexSauce = (index ) => {
         setSauce(prevChawarma => {
           const updatedList = [...prevChawarma];
@@ -99,14 +99,14 @@ function Order() {
             return updatedList;
         });
     };
-    // const DecreaseScoreByIndexDrink = (index ) => {
-    //     if (Drink[index].number !== 0)
-    //         setDrink(prevChawarma => {
-    //         const updatedList = [...prevChawarma];
-    //         updatedList[index] = {...updatedList[index], number: updatedList[index].number - 1};
-    //         return updatedList;
-    //         });
-    // };
+    const DecreaseScoreByIndexDrink = (index ) => {
+        if (Drink[index].number !== 0)
+            setDrink(prevChawarma => {
+            const updatedList = [...prevChawarma];
+            updatedList[index] = {...updatedList[index], number: updatedList[index].number - 1};
+            return updatedList;
+            });
+    };
     const DecreaseScoreByIndexSauce = (index ) => {
         if (Sauce[index].number !== 0)
             setSauce(prevChawarma => {
@@ -231,7 +231,7 @@ function Order() {
             </div>
 
             {/* Choix de la boisson */}
-            {/* <div className='w-full h-auto animate-fadeIn mt-6'>
+            <div className='w-full h-auto animate-fadeIn mt-6'>
                 <p className='text-2xl'>Choisissez votre <span className='text-[#dfd10c] font-bold'>Boissons</span></p>
                 <div className='w-full h-auto'>
                     <div className='md:max-w-[90%] max-w-[90%] h-full w-full flex md:flex-row flex-col mx-auto py-4 overflow-hidden rounded-3xl object-contain md:space-x-10 md:space-y-0 space-y-10'>
@@ -259,7 +259,7 @@ function Order() {
                         ))}
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             {/* Validation de la commande */}
             {/* <div className='w-full h-full py-7 flex justify-center'>
