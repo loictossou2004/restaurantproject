@@ -67,35 +67,37 @@ app.use(express.json());
 //   console.log('Email sent:', info.messageId);
 // }
 
-// app.post('/booked', (req, res) => {
-//     const {name, email, date, time, numbers_person } = req.body;
-//     sendEmail(process.env.SMTP_MAIL, email, date, time, numbers_person)
-//       .then(() => {
-//         res.send('Your reservation has been accepted');
-//       })
-//       .catch(error => {
-//         console.error('Error sending email:', error);
-//         res.status(500).send('An error occurred while sending the email');
-//       });
-//   });
+app.post('/booked', (req, res) => {
+    // const {name, email, date, time, numbers_person } = req.body;
+    // sendEmail(process.env.SMTP_MAIL, email, date, time, numbers_person)
+    //   .then(() => {
+    //     res.send('Your reservation has been accepted');
+    //   })
+    //   .catch(error => {
+    //     console.error('Error sending email:', error);
+    //     res.status(500).send('An error occurred while sending the email');
+    //   });
+    console.log('Your reservation has been accepted');
+  });
 
-//   app.post('/ContactUs', (req, res) => {
-//     const {name, email, phoneNumber, message} = req.body;
-//     sendEmail_Contact_us(email, process.env.SMTP_MAIL, name, phoneNumber, message)
-//       .then(() => {
-//         res.send('Your message sent successfully');
-//       })
-//       .catch(error => {
-//         console.error('Error sending email:', error);
-//         res.status(500).send('An error occurred while sending the email');
-//       });
-//   });
+app.post('/ContactUs', (req, res) => {
+  // const {name, email, phoneNumber, message} = req.body;
+  // sendEmail_Contact_us(email, process.env.SMTP_MAIL, name, phoneNumber, message)
+  //   .then(() => {
+  //     res.send('Your message sent successfully');
+  //   })
+  //   .catch(error => {
+  //     console.error('Error sending email:', error);
+  //     res.status(500).send('An error occurred while sending the email');
+  //   });
+  console.log('Sent email');
+});
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
 
-app.listen(/*process.env.PORT*/ 5000, () => {
-  console.log(`Example app listening on port 5000`);
+app.listen(/*process.env.PORT*/ 8000, () => {
+  console.log(`Example app listening on port 8000`);
 });

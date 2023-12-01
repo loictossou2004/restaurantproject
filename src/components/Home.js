@@ -28,7 +28,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 import { ClipLoader } from 'react-spinners'
 
 
@@ -38,9 +38,9 @@ function Home() {
 
     const navigate = useNavigate()
 
-    // const [loading, setLoading] = useState(false)
-    // const [showSubmit, setShowSubmit] = useState(false)
-    // const [showMessage, setShowMessage] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [showSubmit, setShowSubmit] = useState(false)
+    const [showMessage, setShowMessage] = useState('')
 
     const options = [
         {name: "1 personne", value: 1},
@@ -69,56 +69,56 @@ function Home() {
 
 
 
-    // const Booked = async event =>  {
-    //     event.preventDefault()
-    //     try {
-    //         // Send the form data to the backend
-    //         setLoading(true)
-    //         const response = await axios.post('http://localhost:8000/booked',
-    //             {   
-    //                 name : dataReservation.name,
-    //                 email: dataReservation.email,
-    //                 date: dataReservation.date,
-    //                 time: dataReservation.time,
-    //                 numbers_person: dataReservation.numbers_person
-    //             });
-    //         setTimeout(() => { setLoading(false) }, 2000)
-    //         console.log(response.data); // Success message
-    //         setShowMessage(response.data)
-    //         setShowSubmit(true)
-    //         setTimeout(() => { setShowSubmit(false) }, 5000)
-    //         // setShowMessage('')
-    //       } catch (error) {
-    //         setTimeout(() => { setLoading(false) }, 3000)
-    //         console.error('Error sending email:', error);
-    //       }
-    //     console.log(dataReservation)
-    // }
+    const Booked = async event =>  {
+        event.preventDefault()
+        try {
+            // Send the form data to the backend
+            setLoading(true)
+            const response = await axios.post('http://localhost:8000/booked',
+                {   
+                    name : dataReservation.name,
+                    email: dataReservation.email,
+                    date: dataReservation.date,
+                    time: dataReservation.time,
+                    numbers_person: dataReservation.numbers_person
+                });
+            setTimeout(() => { setLoading(false) }, 2000)
+            console.log(response.data); // Success message
+            setShowMessage(response.data)
+            setShowSubmit(true)
+            setTimeout(() => { setShowSubmit(false) }, 5000)
+            // setShowMessage('')
+          } catch (error) {
+            setTimeout(() => { setLoading(false) }, 3000)
+            console.error('Error sending email:', error);
+          }
+        console.log(dataReservation)
+    }
 
-    // const ContactUs = async event =>  {
-    //     event.preventDefault()
-    //     try {
-    //         // Send the form data to the backend
-    //         setLoading(true)
-    //         const response = await axios.post('http://localhost:8000/ContactUs',
-    //             {   
-    //                 name : dataContactUs.name,
-    //                 email: dataContactUs.email,
-    //                 phoneNumber: dataContactUs.phoneNumber,
-    //                 message: dataContactUs.message
-    //             });
-    //         setTimeout(() => { setLoading(false) }, 2000)
-    //         console.log(response.data); // Success message
-    //         setShowMessage(response.data)
-    //         setShowSubmit(true)
-    //         setTimeout(() => { setShowSubmit(false) }, 5000)
-    //         // setShowMessage('')
-    //       } catch (error) {
-    //         setTimeout(() => { setLoading(false) }, 3000)
-    //         console.error('Error sending email:', error);
-    //       }
-    //     console.log(dataContactUs)
-    // }
+    const ContactUs = async event =>  {
+        event.preventDefault()
+        try {
+            // Send the form data to the backend
+            setLoading(true)
+            const response = await axios.post('http://localhost:8000/ContactUs',
+                {   
+                    name : dataContactUs.name,
+                    email: dataContactUs.email,
+                    phoneNumber: dataContactUs.phoneNumber,
+                    message: dataContactUs.message
+                });
+            setTimeout(() => { setLoading(false) }, 2000)
+            console.log(response.data); // Success message
+            setShowMessage(response.data)
+            setShowSubmit(true)
+            setTimeout(() => { setShowSubmit(false) }, 5000)
+            // setShowMessage('')
+          } catch (error) {
+            setTimeout(() => { setLoading(false) }, 3000)
+            console.error('Error sending email:', error);
+          }
+        console.log(dataContactUs)
+    }
 
 
     return (
@@ -162,7 +162,7 @@ function Home() {
             <div className='max-w-[90%] sm:max-w-[700px] w-full mx-auto mb-4 bg-white p-8 rounded-3xl shadow-lm space-y-3 animate-fadeIn'>
                 <p className='text-xl'>Les réservations sont ouvertes !!!</p>
                 <p className='text-xl'> <span className=' font-bold'>ATTENTION</span> : Saisissez votre numero de télephone dans le formulaire sous le format +229...</p>
-                <form /*onSubmit={Booked}*/ className='space-y-6'>
+                <form onSubmit={Booked} className='space-y-6'>
                     <div>
                         <input value={dataReservation.name} onChange={(e) => setDataReservation((data) => ({...data, name: e.target.value}) )} type='text' placeholder='Saisissez votre nom et prénom' className='w-full p-2 py-sm-3 rounded-md mt-1 outline-none border placeholder:font-extrabold' required/>
                     </div>
@@ -181,19 +181,19 @@ function Home() {
                         ))}
                     </select>
                     <div type='submit' className='flex py-1 justify-center items-center font-bold bg-[#dfd10c] hover:scale-105 transition duration-500 hover:duration-500 cursor-pointer'>
-                        {/* {loading ? */}
-                            <ClipLoader color="#FFF" loading={true} size={130} aria-label="Loading Spinner" data-testid="loader" className=''/>
-                            {/* :
+                        {loading ?
+                            <ClipLoader color="#FFF" loading={true} size={30} aria-label="Loading Spinner" data-testid="loader" className=''/>
+                            :
                             <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Réserver</button>
-                        }                             */}
+                        }                            
                     </div>
                 </form>
             </div>
-            {/* <div className={showSubmit ? 'w-full h-full  fixed top-0 animate-fadeIn' : 'hidden'}>
+            <div className={showSubmit ? 'w-full h-full  fixed top-0 animate-fadeIn' : 'hidden'}>
                 <div className='flex justify-center items-center'>
                     <p className='bg-[#dfd10c] p-5 text-white rounded-lg'> {showMessage}</p>
                 </div>
-            </div> */}
+            </div>
 
 
 
@@ -337,7 +337,7 @@ function Home() {
             <div className='w-full h-full space-y-11 py-12 animate-fadeIn'>
                 <p className='text-3xl'>Nous contacter</p>
                 <div className='max-w-[90%] sm:max-w-[700px] w-full mx-auto mb-4 bg-white p-8 rounded-3xl shadow-lm space-y-3'>
-                    <form /*onSubmit={ContactUs}*/ className='space-y-6'>
+                    <form onSubmit={ContactUs} className='space-y-6'>
                         <div className='flex flex-col items-start'>
                             <label className='text-sm font-extrabold'>Nom</label>
                             <input value={dataContactUs.name} onChange={(e) => setDataContactUs((data) => ({...data, name: e.target.value}) )} type='text' placeholder='Saisissez votre identifiant' className='w-full p-2 py-sm-3 rounded-md mt-1 outline-none border placeholder:font-extrabold' required/>
@@ -355,12 +355,12 @@ function Home() {
                             <textarea value={dataContactUs.message} onChange={(e) => setDataContactUs((data) => ({...data, message: e.target.value}) )} placeholder='Ecrivez ici' className='w-full p-2 py-sm-3 rounded-md mt-1 outline-none border placeholder:font-extrabold'></textarea>
                         </div>
                         <div type="submit" className='flex py-1 justify-center font-bold bg-[#dfd10c] hover:scale-105 transition duration-500 hover:duration-500 cursor-pointer'>
-                            {/* {loading ? */}
+                            {loading ?
                                 <ClipLoader color="#FFFF" loading={true} size={30} aria-label="Loading Spinner" data-testid="loader" className=''/>
-                                {/* :
+                                :
                                 <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Envoyer</button>
-                            } */}
-                            <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Réserver</button>
+                            }
+                            {/* <button className="font-bold whitespace-nowrap px-4 py-2 rounded-full text-xl text-white text-center">Réserver</button> */}
                         </div>
                     </form>
                 </div>
